@@ -31,11 +31,92 @@ body{
 
 .inputs label{
     margin-bottom: 1rem;
+    font-weight: 500;
+    font-size: 1.5rem;
 }
 
 .inputs input{
     border: none;
-    background: #F3F8FB;
+    background-color: #F3F8FB;
     height: 4rem;
     border-radius: .8rem;
+    color: #00474B;
+    font-weight: 700;
+    font-size: 1.8rem;
+    text-align: end;
+    padding-right: 1rem;
+}
+
+.porcentagem{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.8rem;
+    margin-bottom: 3rem;
+}
+
+.porcentagem button{
+    background: #00474B;
+    color: #F3F8FB;
+    border: none;
+    border-radius: .8rem;
+    width: 13rem;
+    height: 4.9rem;
+    font-size: 2.4rem;
+}
+
+.porcentagem .custom{
+    background: #F3F8FB;
+    color: #5F7F7A;
+    font-weight: 700;
+}
+
+/* quebra tela */
+
+.resultado{
+    background: #00474B;
+    border-radius: 1rem;
+    padding: 1.3rem;
+}
+
+.resultado .valor-pessoa{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #00474B;
+    border-radius: 1rem;
+    color: #26C2AD;
+}
+
+.valor-pessoa p{
+    color: #F3F8FB;
+    font-size: 1.5rem;
+}
+
+.valor-pessoa span{
+    color: #54868D;
+    font-size: 1.3rem;
+}
+
+.valor-pessoa .valores{
+    font-size: 2rem;
+    color: #26C2AD;
+    font-weight: bold;
+}
+
+.btnCalcular,
+.btnReset{
+    width: 100%;
+    background: #26C2AD;
+    border: none;
+    height: 4.9rem;
+    border-radius: .8rem;
+    color: #00474B;
+    font-weight: bold;
+    font-size: 2rem;
+    margin-top: 1.9rem;
+}
+
+.hide{
+    display: none;
 }
