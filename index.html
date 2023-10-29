@@ -7,24 +7,25 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css"/>
-    <script src="main.js"></script>
-    <title>calculator</title>
+    <script src="main.js" defer></script>
+    <title>Calculadora</title>
 </head>
 <body>
+    <h1>Calculadora <br>de<br> Gorjeta</h1>
     <div class="card">
         <div class="valores">
-            <form>
+            <form class="form">
                 <div class="inputs">
                     <label for="valor">valor</label>
                     <input type="text" id="valor">
                 </div>  
-                <spa>Selecione a %</spa>
+                <span class="label">Selecione %</span>
                 <div class="porcentagem">
-                    <button>5%</button>
-                    <button>10%</button>
-                    <button>15%</button>
-                    <button>25%</button>
-                    <button>50%</button>
+                    <button class="cinco">5%</button>
+                    <button class="dez">10%</button>
+                    <button class="qui">15%</button>
+                    <button class="vinte">25%</button>
+                    <button class="cinq">50%</button>
                     <button class="custom">Custom</button>
                 </div>  
                 <div class="inputs">
@@ -39,7 +40,7 @@
                     <p>valor total<br><span>/pessoa</span></p>
                 </div>
                 <div class="resultado-pessoa">
-                    <span class="valores">R$4.27</span>
+                    <span class="valor">R$4.27</span>
                 </div>
             </div>
 
@@ -48,13 +49,14 @@
                     <p>total<br><span>/pessoa</span></p>
                 </div>
                 <div class="resultado-pessoa">
-                    <span class="valores">R$4.27</span>
+                    <span class="valor">R$4.27</span>
                 </div>
                 
             </div>
-            <button class="btnCalcular">Calcular</button>
-            <button class="btnReset hide">Resetar</button>
-
+            <div class="btns">
+                <button class="Calcular">Calcular</button>
+                <button class="Reset hide">Resetar</button>
+            </div>
         </div>
     </div>
     

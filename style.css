@@ -14,6 +14,12 @@ body{
     font-family: 'Space Mono', monospace, sans-serif;
 }
 
+h1{
+    color: #446769;
+    font-size: 2.6rem;
+    text-align: center;
+}
+
 .card{
     background: White;
     min-width: 30.2rem;
@@ -29,10 +35,12 @@ body{
     margin-bottom: 3rem;
 }
 
-.inputs label{
+.inputs label,
+.label{
     margin-bottom: 1rem;
-    font-weight: 500;
+    font-weight: 700;
     font-size: 1.5rem;
+    color: #446769;
 }
 
 .inputs input{
@@ -52,7 +60,7 @@ body{
     display: flex;
     flex-wrap: wrap;
     gap: 1.8rem;
-    margin-bottom: 3rem;
+    margin: 3rem auto;
 }
 
 .porcentagem button{
@@ -60,8 +68,8 @@ body{
     color: #F3F8FB;
     border: none;
     border-radius: .8rem;
-    width: 13rem;
-    height: 4.9rem;
+    width: 12.5rem;
+    height: 4.5rem;
     font-size: 2.4rem;
 }
 
@@ -77,6 +85,7 @@ body{
     background: #00474B;
     border-radius: 1rem;
     padding: 1.3rem;
+    width: 100%;
 }
 
 .resultado .valor-pessoa{
@@ -98,14 +107,14 @@ body{
     font-size: 1.3rem;
 }
 
-.valor-pessoa .valores{
+.valor-pessoa .valor{
     font-size: 2rem;
     color: #26C2AD;
     font-weight: bold;
 }
 
-.btnCalcular,
-.btnReset{
+.Calcular,
+.Reset{
     width: 100%;
     background: #26C2AD;
     border: none;
@@ -119,4 +128,33 @@ body{
 
 .hide{
     display: none;
+}
+
+@media(min-width: 720px){
+    .card{
+        display: flex;
+        margin: 4rem auto;
+        max-width: 92.2rem;
+        gap: 5rem;
+    }
+
+    .valores,
+    .resultado{
+        max-width: 41.2rem;
+    }
+
+    .valor-pessoa .valor{
+        font-size: 3rem;
+    }
+
+    .resultado{
+        padding: 3rem;
+        display: flex;
+        flex-direction: column;
+        gap: 4rem 3rem;
+    }
+
+    .btns{
+        margin-top: 9rem;
+    }
 }
