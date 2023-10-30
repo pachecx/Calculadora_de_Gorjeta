@@ -17,20 +17,20 @@
             <form class="form">
                 <div class="inputs">
                     <label for="valor">valor</label>
-                    <input type="text" id="valor">
+                    <input type="text" required id="valor">
                 </div>  
                 <span class="label">Selecione %</span>
                 <div class="porcentagem">
-                    <button class="cinco">5%</button>
-                    <button class="dez">10%</button>
-                    <button class="qui">15%</button>
-                    <button class="vinte">25%</button>
-                    <button class="cinq">50%</button>
+                    <button class="cinco" type="submit" value="0.5">5%</button>
+                    <button class="dez" type="submit" value="0.10">10%</button>
+                    <button class="qui" type="submit" value="0.15">15%</button>
+                    <button class="vinte" type="submit" value="0.25">25%</button>
+                    <button class="cinq" type="submit" value="0.50">50%</button>
                     <button class="custom">Custom</button>
                 </div>  
                 <div class="inputs">
                     <label for="pessoas">Quantidade de pessoas</label>
-                    <input type="text" id="pessoas">
+                    <input type="text" required id="pessoas">
                 </div>
             </form>
         </div>
@@ -43,7 +43,6 @@
                     <span class="valor">R$4.27</span>
                 </div>
             </div>
-
             <div class="valor-pessoa">
                 <div>
                     <p>total<br><span>/pessoa</span></p>
@@ -51,7 +50,6 @@
                 <div class="resultado-pessoa">
                     <span class="valor">R$4.27</span>
                 </div>
-                
             </div>
             <div class="btns">
                 <button class="Calcular">Calcular</button>
@@ -59,6 +57,5 @@
             </div>
         </div>
     </div>
-    
 </body>
 </html>
