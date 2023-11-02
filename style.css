@@ -112,7 +112,8 @@ h1{
     font-size: 1.3rem;
 }
 
-.valor-pessoa .valor{
+.valor-pessoa .valor1,
+.valor-pessoa .valor2{
     font-size: 2rem;
     color: #26C2AD;
     font-weight: bold;
@@ -149,7 +150,8 @@ h1{
         max-width: 41.2rem;
     }
 
-    .valor-pessoa .valor{
+    .valor-pessoa .valor1,
+    .valor-pessoa .valor2{
         font-size: 3rem;
     }
 
