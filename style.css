@@ -63,7 +63,8 @@ h1{
     margin: 3rem auto;
 }
 
-.porcentagem button{
+.porcentagem button,
+.custom{
     background: #00474B;
     color: #F3F8FB;
     border: none;
@@ -72,6 +73,10 @@ h1{
     height: 4.5rem;
     font-size: 2.4rem;
     cursor: pointer;
+}
+
+.custom{
+    padding-left: 1.3rem;
 }
 
 .porcentagem button:focus{

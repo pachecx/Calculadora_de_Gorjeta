@@ -12,7 +12,9 @@ const quinPor = document.querySelector('.quin');
 const vintePor = document.querySelector('.vinte');
 const cinquPor = document.querySelector('.cinq');
 
-const btnPorcentagem = document.body.querySelectorAll(".porcentagem");
+//const customPor = document.querySelector('.custom');
+
+const btnPorcentagem = document.body.querySelectorAll(".porcentagem button");
 
 let valor = document.querySelector('.valor1');
 let valor2 =  document.querySelector('.valor2');
@@ -22,42 +24,47 @@ even.addEventListener('click',(event)=>{
     event.preventDefault()
 });
 
-function Reset(){
-    btnReset.classList.add('hide')
-    btnCalcular.classList.remove('hide')
-    valor.textContent = '00.00'
-    valor2.textContent = '00.00'
-
-};
-
 function Calcular(){
+    
     let total = valorGorjeta.value
     let qnt = qntPessoa.value
-    let valorPagar = valor
-
     
+    //let custom = customPor.value
 
-    valorPessoa = total / qnt
-    valor.textContent = valorPagar = `R$ ${valorPessoa}`
+    if(!total || !qnt){
+        return alert('Insira os valores')
+    }
+
+    totalGorjeta = total * porcentagemSelecionada;
+    porPessoa = totalGorjeta / qnt;
+
+    valor.textContent = `R$ ${totalGorjeta.toFixed(2)}`;
+    valor2.textContent  = `R$ ${porPessoa.toFixed(2)}`;
+    
 };
 
 btnCalcular.addEventListener('click', function(){
     btnReset.classList.remove('hide')
     btnCalcular.classList.add('hide')
+    console.log(btnPorcentagem)
 
     Calcular()
 });
 
 btnReset.addEventListener('click', Reset);
 
+btnPorcentagem.forEach(button => {
+    button.addEventListener("click", function () {
+      porcentagemSelecionada = parseFloat(button.value);
+    });
+});
 
-function porcentagem(){
-    cinco = cincoPor.value
-    dez = dezPor.value 
-    quin = quinPor.value 
-    vinte = vintePor.value
-    cinque = cinquPor.value
-}
+function Reset(){
+    btnReset.classList.add('hide')
+    btnCalcular.classList.remove('hide')
+    valor.textContent = '00.00'
+    valor2.textContent = '00.00'
 
- cinco = cincoPor.value
- 
+    valorGorjeta.value = ''
+    qntPessoa.value = ''
+};
