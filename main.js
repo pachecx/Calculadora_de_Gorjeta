@@ -12,7 +12,7 @@ const quinPor = document.querySelector('.quin');
 const vintePor = document.querySelector('.vinte');
 const cinquPor = document.querySelector('.cinq');
 
-//const customPor = document.querySelector('.custom');
+const customPor = document.querySelector('.custom');
 
 const btnPorcentagem = document.body.querySelectorAll(".porcentagem button");
 
@@ -29,32 +29,31 @@ function Calcular(){
     let total = valorGorjeta.value
     let qnt = qntPessoa.value
     
-    //let custom = customPor.value
+    let custom = customPor.value / 100
 
-    if(!total || !qnt){
-        return alert('Insira os valores')
-    }
+    // if(!total || !qnt){
+    //     return alert('Insira os valores')
+    // }
+
+    
 
     totalGorjeta = total * porcentagemSelecionada;
     porPessoa = totalGorjeta / qnt;
 
     valor.textContent = `R$ ${totalGorjeta.toFixed(2)}`;
     valor2.textContent  = `R$ ${porPessoa.toFixed(2)}`;
-    
+
+    if(custom !== ''){
+        totalGorjeta = total * custom
+        porPessoa = totalGorjeta / qnt;
+        
+        valor.textContent = `R$ ${totalGorjeta.toFixed(2)}`;
+        valor2.textContent  = `R$ ${porPessoa.toFixed(2)}`;
+    }
 };
 
-btnCalcular.addEventListener('click', function(){
-    btnReset.classList.remove('hide')
-    btnCalcular.classList.add('hide')
-    console.log(btnPorcentagem)
-
-    Calcular()
-});
-
-btnReset.addEventListener('click', Reset);
-
 btnPorcentagem.forEach(button => {
-    button.addEventListener("click", function () {
+    button.addEventListener("click", function(){
       porcentagemSelecionada = parseFloat(button.value);
     });
 });
@@ -68,3 +67,11 @@ function Reset(){
     valorGorjeta.value = ''
     qntPessoa.value = ''
 };
+
+btnCalcular.addEventListener('click', function(){
+    btnReset.classList.remove('hide')
+    btnCalcular.classList.add('hide')
+    Calcular()
+});
+
+btnReset.addEventListener('click', Reset);
