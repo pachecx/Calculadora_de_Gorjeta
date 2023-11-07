@@ -31,17 +31,9 @@ function Calcular(){
     
     let custom = customPor.value / 100
 
-    // if(!total || !qnt){
-    //     return alert('Insira os valores')
-    // }
-
-    
-
-    totalGorjeta = total * porcentagemSelecionada;
-    porPessoa = totalGorjeta / qnt;
-
-    valor.textContent = `R$ ${totalGorjeta.toFixed(2)}`;
-    valor2.textContent  = `R$ ${porPessoa.toFixed(2)}`;
+    if(!total || !qnt){
+        return alert('Insira todos os valores')
+    }
 
     if(custom !== ''){
         totalGorjeta = total * custom
@@ -50,6 +42,12 @@ function Calcular(){
         valor.textContent = `R$ ${totalGorjeta.toFixed(2)}`;
         valor2.textContent  = `R$ ${porPessoa.toFixed(2)}`;
     }
+
+    totalGorjeta = total * porcentagemSelecionada;
+    porPessoa = totalGorjeta / qnt;
+
+    valor.textContent = `R$ ${totalGorjeta.toFixed(2)}`;
+    valor2.textContent  = `R$ ${porPessoa.toFixed(2)}`; 
 };
 
 btnPorcentagem.forEach(button => {
@@ -66,6 +64,7 @@ function Reset(){
 
     valorGorjeta.value = ''
     qntPessoa.value = ''
+    customPor.value = ''
 };
 
 btnCalcular.addEventListener('click', function(){
