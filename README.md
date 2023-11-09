@@ -10,11 +10,12 @@ Este projeto é uma calculadora de gorjeta desenvolvida como parte de um desafio
 <li> JavaScript
   
 ## Instruções de Uso
-Abra o arquivo index.html em seu navegador.
-Insira o valor total da conta no campo apropriado.
-Selecione a porcentagem desejada de gorjeta.
-Indique a quantidade de pessoas para dividir a conta.
-Clique no botão "Calcular".
+<li>Abra o arquivo index.html em seu navegador.
+<li>Insira o valor total da conta no campo apropriado.
+<li>Selecione a porcentagem desejada de gorjeta.
+<li>Indique a quantidade de pessoas para dividir a conta.
+<li>Clique no botão "Calcular".
+<li>Link do Deploy: https://pachecx.github.io/Calculadora_de_Gorjeta/
 
 ## Layout Responsivo
 O projeto foi desenvolvido com um design responsivo, garantindo uma experiência consistente em diferentes dispositivos, desde desktops até smartphones.
