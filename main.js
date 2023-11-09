@@ -11,9 +11,7 @@ const dezPor = document.querySelector('.dez');
 const quinPor = document.querySelector('.quin');
 const vintePor = document.querySelector('.vinte');
 const cinquPor = document.querySelector('.cinq');
-
 const customPor = document.querySelector('.custom');
-
 const btnPorcentagem = document.body.querySelectorAll(".porcentagem button");
 
 let valor = document.querySelector('.valor1');
@@ -26,21 +24,17 @@ even.addEventListener('click',(event)=>{
 
 function Calcular(){
     
-    let total = valorGorjeta.value
-    let qnt = qntPessoa.value
-    
-    let custom = customPor.value / 100
+    let total = Number(valorGorjeta.value)
+    let qnt = Number(qntPessoa.value)
+    let custom = Number(customPor.value) / 100
 
     if(!total || !qnt){
         return alert('Insira todos os valores')
     }
 
     if(custom !== ''){
-        totalGorjeta = total * custom
+        totalGorjeta = total * custom;
         porPessoa = totalGorjeta / qnt;
-        
-        valor.textContent = `R$ ${totalGorjeta.toFixed(2)}`;
-        valor2.textContent  = `R$ ${porPessoa.toFixed(2)}`;
     }
 
     totalGorjeta = total * porcentagemSelecionada;
